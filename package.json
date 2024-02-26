@@ -1,6 +1,7 @@
 {
   "name": "character-ai-server",
   "version": "1.0.0",
+  "type": "module",
   "description": "Express server for interacting with CharacterAI",
   "main": "index.js",
   "scripts": {
