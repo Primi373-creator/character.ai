@@ -1,5 +1,5 @@
 import express from 'express';
-import CharacterAI from 'node-character.ai';
+import CharacterAI from '@obasprom/char.ai';
 
 class Test {
   static async sendMessage(characterId, message) {
