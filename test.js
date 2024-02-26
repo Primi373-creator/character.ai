@@ -1,17 +1,15 @@
 import CharacterAI from 'node-character.ai';
 
 export class Test {
-  public static async sendMessage(message: string): Promise<string[]> {
+  public static async sendMessage(characterId: string, message: string): Promise<string[]> {
     const characterAi = new CharacterAI();
 
     try {
       // accessToken is required; keep reading for details.
       await characterAi.authenticate(process.env.CHARACTERAI_TOKEN);
 
-      // you can find your characterId in the URL of a Character's chat page. Keep reading for details.
-      const chat = await characterAi.continueOrCreateChat(
-        process.env.CHARACTERAI_CHARID,
-      );
+      // create or continue chat with the specified characterId
+      const chat = await characterAi.continueOrCreateChat(characterId);
 
       // send a message and wait for the response
       const response = await chat.sendAndAwaitResponse({
