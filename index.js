@@ -1,8 +1,8 @@
 import express from 'express';
 import CharacterAI from 'node-character.ai';
 
-export class Test {
-  public static async sendMessage(characterId: string, message: string): Promise<string[]> {
+class Test {
+  static async sendMessage(characterId, message) {
     const characterAi = new CharacterAI();
 
     try {
