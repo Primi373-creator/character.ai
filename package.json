@@ -9,6 +9,6 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "node-character.ai": "https://github.com/Primi373-creator/node-character.ai"
+    "node-character.ai": "latest"
   }
 }
